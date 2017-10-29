@@ -38,3 +38,6 @@ set statusline+=%=%1*%y%*%*\              " file type
 set statusline+=%10((%l,%c)%)\            " line and column
 set statusline+=%P                        " percentage of file
 set showcmd
+
+" text formatting
+au FileType * set fo-=c fo-=r fo-=o fo+=w
