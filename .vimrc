@@ -40,4 +40,4 @@ set statusline+=%P                        " percentage of file
 set showcmd
 
 " text formatting
-au FileType * set fo-=c fo-=r fo-=o fo+=w
+au FileType * set fo-=c fo-=r fo-=o  " remove auto comment in new line in vim 
