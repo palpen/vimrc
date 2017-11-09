@@ -41,3 +41,15 @@ set showcmd
 
 " text formatting
 au FileType * set fo-=c fo-=r fo-=o  " remove auto comment in new line in vim 
+
+" turn on indentation guide and configure it to desired look
+let g:indent_guides_enable_on_vim_startup = 1
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 1 
+let g:indent_guides_guide_size = 1
+set background=dark
+
+" map cursor column and line to the F2 key
+map <F2> :set cursorcolumn!<Bar>set cursorline!<CR>
+hi cursorcolumn ctermfg=White ctermbg=DarkGray
+hi cursorline ctermfg=White ctermbg=DarkGray
