@@ -11,6 +11,7 @@ syntax on               " set syntax highlighting on
 filetype plugin indent on
 set relativenumber      " relative line number mode
 let base16colorspace=256  " Access colors present in 256 colorspace
+set noeb vb t_vb=  " remove error beep
 
 " vim-plug plugin manager 
 call plug#begin('~/.vim/plugged')
@@ -50,6 +51,12 @@ let g:indent_guides_guide_size = 1
 set background=dark
 
 " map cursor column and line to the F2 key
-map <F2> :set cursorcolumn!<Bar>set cursorline!<CR>
 hi cursorcolumn ctermfg=White ctermbg=DarkGray
 hi cursorline ctermfg=White ctermbg=DarkGray
+
+" macvim settings
+set gfn=Monaco:h18  " font size
+
+" key mappings 
+nmap <C-k> :NERDTreeToggle<CR>  " toggle to open nerdtree
+map <F2> :set cursorcolumn!<Bar>set cursorline!<CR>  " toggle cursor column highlighting
