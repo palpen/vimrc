@@ -12,6 +12,7 @@ filetype plugin indent on
 set relativenumber      " relative line number mode
 let base16colorspace=256  " Access colors present in 256 colorspace
 set noeb vb t_vb=  " remove error beep
+filetype on
 
 " vim-plug plugin manager 
 call plug#begin('~/.vim/plugged')
@@ -58,5 +59,12 @@ hi cursorline ctermfg=White ctermbg=DarkGray
 set gfn=Monaco:h18  " font size
 
 " key mappings 
-nmap <C-k> :NERDTreeToggle<CR>  " toggle to open nerdtree
-map <F2> :set cursorcolumn!<Bar>set cursorline!<CR>  " toggle cursor column highlighting
+
+" toggle NerdTree on / off (use Control-w-w to ensure your not in nerdtree when toggling off
+nmap <C-n> :NERDTreeToggle<CR>  
+
+" toggle cursor column highlighting
+map <F2> :set cursorcolumn!<Bar>set cursorline!<CR>  
+
+" run python code
+autocmd FileType python nnoremap <buffer> <F3> :exec '!clear; python' shellescape(@%, 1)<cr>
